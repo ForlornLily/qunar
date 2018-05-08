@@ -6,7 +6,7 @@
           <div class="icon-img">
             <img class="icon-img-content" :src="item.imgUrl">
           </div>
-          <p class="icon-intro">{{item.title}}</p>
+          <p class="icon-intro">{{item.desc}}</p>
         </div>
       </swiper-slide>
     </swiper>
@@ -16,6 +16,9 @@
 <script>
 export default {
   name: 'HomeIcons',
+  props: {
+    icondata: Array
+  },
   data () {
     return {
       swiperOption: {
@@ -64,7 +67,7 @@ export default {
     //计算swiper-slide生成个数
     page () {
       const pages = []
-      this.iconList.forEach((item, index) => {
+      this.icondata.forEach((item, index) => {
         const page = Math.floor(index / 8)
         if (!pages[page]) {
           pages[page] = []

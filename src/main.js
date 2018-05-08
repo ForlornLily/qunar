@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import fastClick from "fastclick"
 import VueAwesomeSwiper from "vue-awesome-swiper"
+import store from "./store"                       //导入公用数据
 import "style/reset.css"
 import "style/border.css"
 import "style/iconfont.css"
@@ -18,6 +19,7 @@ Vue.use(VueAwesomeSwiper)
 new Vue({
   el: '#app',
   router,                //router: router
+  store,                 //根实例注册以后，可以使用全局this.$store
   components: { App },
   template: '<App/>'
 })
