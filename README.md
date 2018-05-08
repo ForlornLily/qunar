@@ -87,15 +87,18 @@ $ npm run dev
    
    
 ```
-src/pages/home
+## src/pages/home
 
 ![](static/images/home.png)
 
-src/pages/city
+## src/pages/city
 
 ![](static/images/city.png)
 
-src/pages/city
+## src/pages/city
 
 ![](static/images/citySearch.png)
+# 参考资料
+1. [vue.js](https://cn.vuejs.org/v2/guide/)官网
+2. [Vue2.5开发去哪儿网App](https://coding.imooc.com/class/203.html)
 
