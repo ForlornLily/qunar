@@ -5,7 +5,7 @@
         <div class="title border-topbottom">当前城市</div>
         <div class="button-list">
           <div class="button-wrapper">
-            <div class="button">{{this.$store.state.city}}</div>
+            <div class="button">{{this.curentCity}}</div>
           </div>
         </div>
       </div>
@@ -29,6 +29,8 @@
 
 <script>
 import BScroll from 'better-scroll'
+//简化this.$store.state.city
+import { mapState, mapMutations } from "vuex"
 export default {
   name: 'CityList',
   props: {
@@ -36,16 +38,26 @@ export default {
     hotCities: Array,
     letter: String
   },
+  computed: {
+    //mapState把数据映射到计算属性中
+    //此处把vuex中的city映射到计算属性curentCity中
+    ...mapState({
+      curentCity: 'city'
+    })
+  },
   methods: {
     setCity (city) {
       //点击热门城市或者所有城市，赋值给当前城市和首页的城市
       //通过vuex的dispatch去派发一个action，在store/index.js下进行方法处理
       //this.$store.dispatch("changeCity", city)
       //此处不涉及异步操作，可以直接通过mutations操作
-      this.$store.commit("setCity", city)
+      //this.$store.commit("setCity", city)
+      //另一种方式：使用vuex自带的mapMutations
+      this.changeCity(city)
       //点击城市跳转到首页
       this.$router.push("/")
-    }
+    },
+    ...mapMutations(['changeCity'])
   },
   mounted () {
     //创建better-scroll实例
