@@ -21,6 +21,10 @@ $ npm run dev
 ```
 浏览器调成手机模拟器，打开[http://localhost:8080/](http://localhost:8080/)
 
+手机也可局域网通过ip访问：
+
+ip:8080
+
 # 目录结构
 ```
 ├─config                           // 配置项
@@ -50,10 +54,18 @@ $ npm run dev
 │  │     │─mixcommon.styl          //stylus:通用样式函数
 │  │     │  
 │  │     └─varibles.styl           //stylus:通用样式
+│  │ 
+│  ├─common                        //全局公用组件
+│  │  │  
+│  │  │─gallarry                   //点击图片进入图片画廊（轮播）
+│  │  │ 
+│  │  └─fade                       //动画
 │  │
 │  ├─pages                         //vue组件
 │  │  │  
 │  │  │─city                       //见下方截图
+│  │  │  
+│  │  │─detail                     //点击"猜你喜欢"下的城市进入详情页
 │  │  │ 
 │  │  └─home                       //见下方截图  
 │  │

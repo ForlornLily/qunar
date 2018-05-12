@@ -2,7 +2,7 @@
   <div>
     <div class="title">猜你喜欢</div>
     <ul>
-        <li class="item" v-for="item of list" :key="item.id">
+        <router-link tag="li" :to="'/detail/'+item.id" class="item" v-for="item of list" :key="item.id">
           <div class="item-img-wrapper">
             <img class="item-img" :src="item.imgUrl">
           </div>
@@ -13,7 +13,7 @@
               起
             </p>
           </div>
-        </li>
+        </router-link>
     </ul>
   </div>
 </template>
