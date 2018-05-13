@@ -1,3 +1,4 @@
+//打生产包, 对应package.json > scripts > build
 'use strict'
 require('./check-versions')()
 
@@ -8,7 +9,7 @@ const rm = require('rimraf')
 const path = require('path')
 const chalk = require('chalk')
 const webpack = require('webpack')
-const config = require('../config')
+const config = require('../config')//默认加载文件夹下的index.js
 const webpackConfig = require('./webpack.prod.conf')
 
 const spinner = ora('building for production...')

@@ -13,7 +13,7 @@ function resolve (dir) {
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
-    app: './src/main.js'
+    app: './src/main.js'//项目入口
   },
   output: {
     path: config.build.assetsRoot,
@@ -23,8 +23,8 @@ module.exports = {
       : config.dev.assetsPublicPath
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json'],
-    alias: {
+    extensions: ['.js', '.vue', '.json'],//加载对应后缀名的文件后可以不写后缀
+    alias: {                            //变量别名
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
       'style': resolve("src/assets/styles"),
@@ -44,15 +44,15 @@ module.exports = {
         include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
       },
       {
-        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/, //把图片变成Base64编码，不再请求url，直接变成一个文本
         loader: 'url-loader',
         options: {
-          limit: 10000,
+          limit: 10000,//10kb以下图片进行编码，大于10kb仍然用url
           name: utils.assetsPath('img/[name].[hash:7].[ext]')
         }
       },
       {
-        test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
+        test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/, //同上
         loader: 'url-loader',
         options: {
           limit: 10000,
@@ -60,7 +60,7 @@ module.exports = {
         }
       },
       {
-        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/, //同上
         loader: 'url-loader',
         options: {
           limit: 10000,

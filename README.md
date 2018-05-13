@@ -95,7 +95,7 @@ ip:8080
 ├─package.json              
 │                           
 │
-└─其他                      // vue-cli生成的一些配置，暂时不去了解
+└─其他                      // vue-cli， webpack等生成的一些配置，注释了一部分，见各个js
    
    
 ```
