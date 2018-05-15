@@ -1,5 +1,9 @@
 # qunar
 仿照[去哪儿购票移动端](http://piao.qunar.com/touch/)部分功能
+
+[预览地址](https://bareisho.github.io/qunar)
+
+*浏览器调成手机模拟器，或者手机直接访问*
 # 文档说明
 1. 工具框架
 2. 部署 
