@@ -2,7 +2,7 @@
   "name": "travelstart",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "bareisho <tudoutasty@gmail.com>",
+  "author": "Forlorn <tudoutasty@gmail.com>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --host 0.0.0.0 --progress --config build/webpack.dev.conf.js",

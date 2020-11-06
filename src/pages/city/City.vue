@@ -32,7 +32,7 @@ export default {
     getCityData () {
       //static可以直接访问，其他会被重新定位，所以json放在static下
       //真实项目请求的路径假设为api，而本地模拟数据用静态即可
-      //通过webpakc 在config/index.js的proxyTable进行重定位
+      //通过webpack 在config/index.js的proxyTable进行重定位
       axios.get('/api/city.json')
         .then(this.cityDataSuccess)
     },

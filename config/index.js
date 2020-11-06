@@ -50,7 +50,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',//打包后的路径。默认为根路径。放到服务器某个文件夹，则修改该路径为/targetFolder
+    assetsPublicPath: '/qunar/',//打包后的路径。默认为根路径。放到服务器某个文件夹，则修改该路径为/targetFolder
 
     /**
      * Source Maps
